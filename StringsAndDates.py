@@ -1,42 +1,46 @@
-user_date = input("Enter date: ")
-while user_date != '-1':
-    tokens = user_date.split()   # split by space
+# James Groseclose CIS 261
+#  Strings and Dates
+
+sample_date = input("Enter date: ")
+
+while sample_date != '-1':
+    tokens = sample_date.split()
     month = tokens[0]
     if month == 'January':
-        month_int = 1
+        month_num = 1
     elif month == 'February':
-        month_int = 2
+        month_num = 2
     elif month == 'March':
-        month_int = 3
+        month_num = 3
     elif month == 'April':
-        month_int = 4
+        month_num = 4
     elif month == 'May':
-        month_int = 5
+        month_num = 5
     elif month == 'June':
-        month_int = 6
+        month_num = 6
     elif month == 'July':
-        month_int = 7
+        month_num = 7
     elif month == 'August':
-        month_int = 8
+        month_num = 8
     elif month == 'September':
-        month_int = 9
+        month_num = 9
     elif month == 'October':
-        month_int = 10
+        month_num = 10
     elif month == 'November':
-        month_int = 11
+        month_num = 11
     elif month == 'December':
-        month_int = 12
+        month_num = 12
     else:
-        month_int = 0
-    if len(tokens) >= 3 and month_int != 0 :
-        date_string = tokens[1]
-        if date_string[len(date_string) -1] == ',':
-            date_string = date_string[0:len(date_string) -1]
+        month_num = 0
+    if len(tokens) >= 3 and month_num != 0 :
+        date_adjusted = tokens[1]
+        if date_adjusted[len(date_adjusted) -1] == ',':
+            date_adjusted = date_adjusted[0:len(date_adjusted) -1]
             year = tokens[2]
-            print(str(month_int)+'/'+date_string+'/'+str(year))
+            print(str(month_num)+'/'+date_adjusted+'/'+str(year))
         else:
             print("Date entered is not valid")
     else:
         print("Date entered is not valid")
-    user_date = input("Enter date: ")
+    sample_date = input("Enter date: ")
 
